@@ -8,3 +8,5 @@
 4. create a script.js file
 5. link it in the index.html
 6. test the script with 'hello world'
+
+Code Quiz Animation Guide: ![code quiz](./Assets/04-web-apis-homework-demo.gif)
