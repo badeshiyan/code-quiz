@@ -10,3 +10,5 @@
 6. test the script with 'hello world'
 
 Code Quiz Animation Guide: ![code quiz](./Assets/04-web-apis-homework-demo.gif)
+
+W3schools: https://www.w3schools.com/

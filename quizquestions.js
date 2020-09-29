@@ -1,6 +1,4 @@
 // code quiz questions
-console.log("Hello World");
-
 var quizquestions = [
   {
     question: "Commonly used data types DO NOT include:",
@@ -37,14 +35,12 @@ var quizquestions = [
   },
 ];
 
-var timer = document.querySelector(".time");
-var question = document.querySelector(".question");
-var btn1 = document.querySelector(".btn1");
-var btn2 = document.querySelector(".btn2");
-var btn3 = document.querySelector(".btn3");
-var btn4 = document.querySelector(".btn4");
+// var timer = document.querySelector(".timer");
+var main = document.querySelector(".main");
 var secondsLeft = 75;
+var index = 0;
 
+/*
 function setTime() {
   var timerInterval = setInterval(function () {
     secondsLeft--;
@@ -56,18 +52,61 @@ function setTime() {
     }
   }, 1000);
 }
-function myTest() {
-  setTime();
-  for (var i = 0; i < quizquestions.length; i++) {
-    question.textContent = quizquestions[i].question;
-    btn1.textContent = quizquestions[i].options[0];
-    btn2.textContent = quizquestions[i].options[1];
-    btn3.textContent = quizquestions[i].options[2];
-    btn4.textContent = quizquestions[i].options[3];
+*/
+
+function startQuiz() {
+  // clear any html code that may already exist
+  // re-initialize main variables, in case you are re-running the quiz again
+
+  var quizHeader = document.createElement("p");
+  quizHeader.textContent = "Coding Quiz Challenge";
+
+  var instructions = document.createElement("p");
+  instructions.textContent =
+    "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!";
+
+  var startQuizBtn = document.createElement("button");
+  startQuizBtn.textContent = "Start Quiz";
+
+  main.appendChild(quizHeader);
+  main.appendChild(instructions);
+  main.appendChild(startQuizBtn);
+
+  startQuizBtn.addEventListener("click", function () {
+    displayQuiz();
+  });
+}
+
+function displayQuiz() {
+  main.innerHTML = "";
+  if (index == quizquestions.length) {
+    recordScore();
+  } else {
+    var question = document.createElement("p");
+    question.textContent = quizquestions[index].question;
+    main.appendChild(question);
+
+    for (var i = 0; i < quizquestions[index].options.length; i++) {
+      var answerBtn = document.createElement("button");
+      answerBtn.textContent = quizquestions[index].options[i];
+      main.appendChild(answerBtn);
+
+      answerBtn.addEventListener("click", function () {
+        checkAnswer();
+        index++;
+        displayQuiz();
+      });
+    }
   }
 }
-myTest();
-btn1.addEventListener("click", null);
-btn2.addEventListener("click", null);
-btn3.addEventListener("click", null);
-btn4.addEventListener("click", null);
+
+function checkAnswer() {
+  alert("answer");
+}
+
+function recordScore() {
+  alert("quiz over");
+}
+
+startQuiz();
+// additional comments go here
