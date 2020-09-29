@@ -35,12 +35,14 @@ var quizquestions = [
   },
 ];
 
-// var timer = document.querySelector(".timer");
+var timer = document.querySelector(".timer");
+var scoreElement = document.querySelector(".score");
 var main = document.querySelector(".main");
+var answeralert = document.querySelector(".answeralert");
 var secondsLeft = 75;
 var index = 0;
+var score = 0;
 
-/*
 function setTime() {
   var timerInterval = setInterval(function () {
     secondsLeft--;
@@ -52,7 +54,6 @@ function setTime() {
     }
   }, 1000);
 }
-*/
 
 function startQuiz() {
   // clear any html code that may already exist
@@ -73,12 +74,17 @@ function startQuiz() {
   main.appendChild(startQuizBtn);
 
   startQuizBtn.addEventListener("click", function () {
+    setTime();
+    scoreElement.textContent = "score " + score;
     displayQuiz();
   });
 }
 
 function displayQuiz() {
   main.innerHTML = "";
+  setTimeout(function () {
+    answeralert.textContent = "";
+  }, 2000);
   if (index == quizquestions.length) {
     recordScore();
   } else {
@@ -92,7 +98,8 @@ function displayQuiz() {
       main.appendChild(answerBtn);
 
       answerBtn.addEventListener("click", function () {
-        checkAnswer();
+        userChoice = this.textContent;
+        checkAnswer(userChoice);
         index++;
         displayQuiz();
       });
@@ -100,8 +107,16 @@ function displayQuiz() {
   }
 }
 
-function checkAnswer() {
-  alert("answer");
+function checkAnswer(answer) {
+  correctAnswer = quizquestions[index].answer;
+  if (correctAnswer === answer) {
+    score++;
+    scoreElement.textContent = "score " + score;
+    answeralert.textContent = "correct";
+  } else {
+    answeralert.textContent = "wrong";
+    secondsLeft -= 10;
+  }
 }
 
 function recordScore() {
