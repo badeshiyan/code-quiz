@@ -1,21 +1,18 @@
-# code-quiz
+## code-quiz
 
 ## Overview:
 
-1. create index.html
-2. add boilerplate
-3. add css library
-4. create a script.js file
-5. link it in the index.html
-6. test the script with 'hello world'
+As the reader reviews this coding project, one will find a web application of a timed coding quiz with multiple-choice questions. This project was created with the use of learned coding concepts including html, css and javascript, along with some bootstrap elements.
 
 ## Deployed Webpage Link
 
 Please find the deployed webpage link here: https://badeshiyan.github.io/code-quiz/
 
+## Screenshots of Deployed Webpage
+
 ## Credits
 
-1. Code Quiz Animation Guide: ![code quiz](./Assets/04-web-apis-homework-demo.gif)
+1. Code Quiz Animation Guide: (./Assets/04-web-apis-homework-demo.gif)
 
 2. W3schools: https://www.w3schools.com/
 
