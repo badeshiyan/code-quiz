@@ -43,14 +43,14 @@ var secondsLeft = 75;
 var index = 0;
 var score = 0;
 var scoreArray = [];
+var timerInterval = 0;
 
 function setTime() {
-  var timerInterval = setInterval(function () {
+  timerInterval = setInterval(function () {
     secondsLeft--;
     timer.textContent = "Time: " + secondsLeft;
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
-      alert("Your time is up!");
       recordScore();
     }
   }, 1000);
@@ -91,6 +91,7 @@ function displayQuiz() {
   }, 2000);
 
   if (index == quizquestions.length) {
+    clearInterval(timerInterval);
     recordScore();
   } else {
     var question = document.createElement("p");
