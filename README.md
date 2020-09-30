@@ -20,6 +20,8 @@ Please find the deployed webpage link here: https://badeshiyan.github.io/code-qu
 
 4. MDN web docs: https://developer.mozilla.org/en-US/docs/Web/CSS
 
+5. Stackoverflow.com: https://stackoverflow.com/
+
 ## MIT License
 
 Copyright (c) [2020] [Adebambo Adeshiyan]

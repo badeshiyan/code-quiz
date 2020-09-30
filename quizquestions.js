@@ -34,7 +34,7 @@ var quizquestions = [
     answer: "console log",
   },
 ];
-
+// declared variables
 var timer = document.querySelector(".timer");
 var scoreElement = document.querySelector(".score");
 var main = document.querySelector(".main");
@@ -45,6 +45,7 @@ var score = 0;
 var scoreArray = [];
 var timerInterval = 0;
 
+// function that displays quiz timer
 function setTime() {
   timerInterval = setInterval(function () {
     secondsLeft--;
@@ -56,12 +57,14 @@ function setTime() {
   }, 1000);
 }
 
+// function to initiate beginning of coding quiz
 function startQuiz() {
   main.innerHTML = "";
   secondsLeft = 75;
   index = 0;
   score = 0;
 
+  // landing page details (title, instructions and start button)
   var quizHeader = document.createElement("p");
   quizHeader.textContent = "Coding Quiz Challenge";
 
@@ -83,6 +86,7 @@ function startQuiz() {
   });
 }
 
+// function and if/else to show show actual quiz questions and right or wrong answer alerts
 function displayQuiz() {
   main.innerHTML = "";
 
@@ -116,13 +120,14 @@ function checkAnswer(answer) {
   if (quizquestions[index].answer === answer) {
     score++;
     scoreElement.textContent = "Score: " + score;
-    answeralert.textContent = "Correct";
+    answeralert.textContent = "Correct!";
   } else {
-    answeralert.textContent = "Wrong";
+    answeralert.textContent = "Wrong!";
     secondsLeft -= 10;
   }
 }
 
+// function for quiz score results
 function recordScore() {
   main.innerHTML = "";
 
@@ -199,5 +204,7 @@ function showHighScores() {
     showHighScores();
   });
 }
+
+localStorage.getItem("highScores", JSON.stringify([]));
 
 startQuiz();
