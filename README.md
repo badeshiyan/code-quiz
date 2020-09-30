@@ -2,7 +2,7 @@
 
 ## Overview:
 
-As the reader reviews this coding project, one will find a web application of a timed coding quiz with multiple-choice questions. This project was created with the use of learned coding concepts including html, css and javascript, along with some bootstrap elements.
+As the reader reviews this coding project, one will find a web application of a timed coding quiz (75 seconds) with 5 multiple-choice questions. This project was created with the use of learned coding concepts including html, css and javascript, along with some bootstrap elements. As a web page with dynamic html and css properties and features, the reader/user can interact with said page, answering each of the questions related to coding basics. Upon conclusion, the user will be able not only review their particular score, but also can enter their initials to record the score and save it among other users's quiz scores as well. The user must do their best as every wrong answer will result in the reduction of 10 seconds from the running timer...good luck!
 
 ## Deployed Webpage Link
 
