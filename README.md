@@ -12,17 +12,29 @@ Please find the deployed webpage link here: https://badeshiyan.github.io/code-qu
 
 ![Bambo Adeshiyan](assets/cqscreenshot1.png)
 
+![Bambo Adeshiyan](assets/cqscreenshot2.png)
+
+![Bambo Adeshiyan](assets/cqscreenshot3.png)
+
+![Bambo Adeshiyan](assets/cqscreenshot4.png)
+
+![Bambo Adeshiyan](assets/cqscreenshot5.png)
+
+![Bambo Adeshiyan](assets/cqscreenshot6.png)
+
+![Bambo Adeshiyan](assets/cqscreenshot7.png)
+
+![Bambo Adeshiyan](assets/cqscreenshot8.png)
+
 ## Credits
 
-1. Code Quiz Animation Guide: (./Assets/04-web-apis-homework-demo.gif)
+1. W3schools: https://www.w3schools.com/
 
-2. W3schools: https://www.w3schools.com/
+2. Bootstrap: https://getbootstrap.com/
 
-3. Bootstrap: https://getbootstrap.com/
+3. MDN web docs: https://developer.mozilla.org/en-US/docs/Web/CSS
 
-4. MDN web docs: https://developer.mozilla.org/en-US/docs/Web/CSS
-
-5. Stackoverflow.com: https://stackoverflow.com/
+4. Stackoverflow.com: https://stackoverflow.com/
 
 ## MIT License
 
