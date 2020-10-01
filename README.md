@@ -10,7 +10,7 @@ Please find the deployed webpage link here: https://badeshiyan.github.io/code-qu
 
 ## Screenshots of Deployed Webpage
 
-![Bambo Adeshiyan](code-quiz/assets/screenshot1.png)
+![Bambo Adeshiyan](assets/cqscreenshot1.png)
 
 ## Credits
 
