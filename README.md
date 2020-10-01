@@ -10,6 +10,8 @@ Please find the deployed webpage link here: https://badeshiyan.github.io/code-qu
 
 ## Screenshots of Deployed Webpage
 
+![Bambo Adeshiyan](assets/screenshot1.png)
+
 ## Credits
 
 1. Code Quiz Animation Guide: (./Assets/04-web-apis-homework-demo.gif)
