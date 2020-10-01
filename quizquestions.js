@@ -34,6 +34,7 @@ var quizquestions = [
     answer: "console log",
   },
 ];
+
 // declared variables
 var timer = document.querySelector(".timer");
 var scoreElement = document.querySelector(".score");
@@ -50,6 +51,7 @@ function setTime() {
   timerInterval = setInterval(function () {
     secondsLeft--;
     timer.textContent = "Time: " + secondsLeft;
+    timer.style.fontSize = "larger";
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
       recordScore();
@@ -67,6 +69,7 @@ function startQuiz() {
   // landing page details (title, instructions and start button)
   var quizHeader = document.createElement("p");
   quizHeader.textContent = "Coding Quiz Challenge";
+  quizHeader.style.fontSize = 300;
 
   var instructions = document.createElement("p");
   instructions.textContent =
@@ -74,6 +77,8 @@ function startQuiz() {
 
   var startQuizBtn = document.createElement("button");
   startQuizBtn.textContent = "Start Quiz";
+  startQuizBtn.style.color = "white";
+  startQuizBtn.style.backgroundColor = "purple";
 
   main.appendChild(quizHeader);
   main.appendChild(instructions);
@@ -105,6 +110,8 @@ function displayQuiz() {
     for (var i = 0; i < quizquestions[index].options.length; i++) {
       var answerBtn = document.createElement("button");
       answerBtn.textContent = quizquestions[index].options[i];
+      answerBtn.style.color = "white";
+      answerBtn.style.backgroundColor = "purple";
       main.appendChild(answerBtn);
 
       answerBtn.addEventListener("click", function () {
@@ -149,6 +156,8 @@ function recordScore() {
 
   var submitInitialsBtn = document.createElement("button");
   submitInitialsBtn.textContent = "Submit";
+  submitInitialsBtn.style.color = "white";
+  submitInitialsBtn.style.backgroundColor = "purple";
 
   main.appendChild(scoreHeader);
   main.appendChild(finalScore);
@@ -188,9 +197,13 @@ function showHighScores() {
 
   var goBackBtn = document.createElement("button");
   goBackBtn.textContent = "Go Back";
+  goBackBtn.style.color = "white";
+  goBackBtn.style.backgroundColor = "purple";
 
   var clearHighScoresBtn = document.createElement("button");
   clearHighScoresBtn.textContent = "Clear High Scores";
+  clearHighScoresBtn.style.color = "white";
+  clearHighScoresBtn.style.backgroundColor = "purple";
 
   main.appendChild(goBackBtn);
   main.appendChild(clearHighScoresBtn);
