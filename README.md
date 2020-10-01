@@ -36,6 +36,8 @@ Please find the deployed webpage link here: https://badeshiyan.github.io/code-qu
 
 4. Stackoverflow.com: https://stackoverflow.com/
 
+5. ![code quiz](./Assets/04-web-apis-homework-demo.gif)
+
 ## MIT License
 
 Copyright (c) [2020] [Adebambo Adeshiyan]
