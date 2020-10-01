@@ -112,7 +112,10 @@ function displayQuiz() {
       answerBtn.textContent = quizquestions[index].options[i];
       answerBtn.style.color = "white";
       answerBtn.style.backgroundColor = "purple";
+
+      var br = document.createElement("br");
       main.appendChild(answerBtn);
+      main.appendChild(br);
 
       answerBtn.addEventListener("click", function () {
         checkAnswer(this.textContent);
@@ -176,10 +179,13 @@ function recordScore() {
   });
 }
 
+// function to show user's high scores
 function showHighScores() {
   main.innerHTML = "";
 
-  // sort the array of scoreObjects in descending order (i.e. largest to smallest)
+  scoreArray.sort(function (a, b) {
+    return b.objScore - a.objScore;
+  });
 
   var highScoresHeader = document.createElement("p");
   highScoresHeader.textContent = "Highscores";
@@ -217,7 +223,5 @@ function showHighScores() {
     showHighScores();
   });
 }
-
-localStorage.getItem("highScores", JSON.stringify([]));
 
 startQuiz();
